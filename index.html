@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu|Lobster" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>lIMITLESS</title>
+<style>
+  #title{
+  font-size:50px;
+  margin:0;
+  font-family: Lobster;
+  text-align: center;
+ 
+}
+
+#caption{
+  margin:0;
+  font-family: Lobster;
+  text-align: center ;
+
+}
+
+
+hr{
+  width: 60%;
+  height: 3px;
+  background-color: #000000;
+}
+
+#mainimage{
+  width: 100%;
+  height:500px;
+  position: absolute;
+  overflow:hidden;
+  left:0;
+
+}
+
+#login-box{
+  width: 30%;
+  background-color: white;
+  position: absolute;
+  z-index: 20;
+  padding: 20px;
+  margin: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+input{
+  width:80%;
+  border-radius: 5px;
+  margin-top:20px;
+  height: 25px;
+  padding: 20px;
+  border: 1px solid black;
+}
+#login-btn{
+  width: 80%;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 16px;
+  font-size: 20px;
+  background-color: blue;
+  color: white;
+}
+
+.parallax{
+   background-image: url("http://ajjuliani.com/wp-content/uploads/2016/07/Genius-Hour-Kid.png");
+   height:500px;
+   background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media only screen and (max-width:768px) {
+    #login-box{
+        width:65%;
+		text-align:center;
+		margin:30px;
+	
+    }
+	input{
+	    height: 20px;
+        padding: 10px;
+	}
+
+}
+
+</style>
+</head>
+<body>
+<!-- Start your code here -->
+
+
+
+<h1 id="title">Limitless</h1>
+  <p id="caption">The Ultimate Quiz competition</p>
+  <hr/>
+  <div>
+  <div class="parallax">
+      <div id="login-box">
+    <p style="font-family:Lobster;font-size:30px;text-align:center;"><b>Login</b></p>
+    <input type="text" placeholder="Username :" style="margin:5px">
+    <input type="password" placeholder="Password :" style="margin:5px">
+    <button id="login-btn">Login</button>
+  </div>
+  </div>
+  
+
+  </div>
+
+<!-- End your code here -->
+
+
+</body>
+</html> 

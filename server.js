@@ -1,4 +1,5 @@
 //  OpenShift sample Node application
+var path=require('path');
 var express = require('express'),
     app     = express(),
     morgan  = require('morgan');
@@ -57,21 +58,9 @@ var initDb = function(callback) {
 };
 
 app.get('/', function (req, res) {
-  // try to initialize the db on every request if it's not already
-  // initialized.
-  if (!db) {
-    initDb(function(err){});
-  }
-  if (db) {
-    var col = db.collection('counts');
-    // Create a document with request IP and current time of request
-    col.insert({ip: req.ip, date: Date.now()});
-    col.count(function(err, count){
-      res.render('index.html', { pageCountMessage : count, dbInfo: dbDetails });
-    });
-  } else {
-    res.render('index.html', { pageCountMessage : null});
-  }
+  
+    res.sendFile(path.join(__dirname,'/','index.html'));
+ 
 });
 
 app.get('/pagecount', function (req, res) {
@@ -99,7 +88,7 @@ initDb(function(err){
   console.log('Error connecting to Mongo. Message:\n'+err);
 });
 
-app.listen(port, ip);
+app.listen(port,ip);
 console.log('Server running on http://%s:%s', ip, port);
 
 module.exports = app ;
